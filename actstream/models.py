@@ -96,6 +96,7 @@ class Action(models.Model):
                                               'action_object_object_id')
 
     timestamp = models.DateTimeField(default=now, db_index=True)
+    read = models.DateTimeField(null=True, blank=True)
 
     public = models.BooleanField(default=True, db_index=True)
 
